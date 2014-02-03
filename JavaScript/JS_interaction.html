@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/foundation.min.css"/>
+    <script type="text/javascript" src="../js_vendor/syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
+    <script type="text/javascript" src="../js_vendor/syntaxhighlighter_3.0.83/scripts/shBrushJScript.js"></script>
+    <link href="../js_vendor/syntaxhighlighter_3.0.83/styles/shCore.css" rel="stylesheet" type="text/css" />
+    <link href="../js_vendor/syntaxhighlighter_3.0.83/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+    <title>JavaScript Учебник</title>
+</head>
+<body>
+<script type="text/javascript">
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.defaults['gutter'] = false;
+    SyntaxHighlighter.all()
+</script>
+<div class="panel"><h2>Учебник JAVASCRIPT</h2></div>
+<div class="row">
+    <div class="large-2 columns">
+        <h4>Меню</h4>
+        <ul class="side-nav">
+            <li><a href="JS_1.0.html">Глава 1</a></li>
+            <li><a href="JS_1.1.html">Глава 1.1</a></li>
+            <li class="active"><a href="JS_interaction.html">Взаимодействие</a></li>
+        </ul>
+    </div>
+    <div class="large-10 columns">
+        <h4> Взаимодейстрие с пользователем</h4>
+        <br/>
+        <h5>Взаимодейстрие с пользователем</h5>
+        <p>Для взаимодействия с пользователем глобальные методы. Что такое <a href="#">методы глава x</a> ? </p>
+        <ul>
+            <li>
+                <p>alert</p>
+            </li>
+            <li>
+                <p>prompt</p>
+            </li>
+            <li>
+                <p>confirm</p>
+            </li>
+        </ul>
+        <p>Рассмотрим каждый в отдельности. Самый простой это <code>alert</code>, который выводит сообщение и приостанавливает работу пока пользователь не
+        нажмет кнопку OK</p>
+        <p>Синтаксис</p>
+        <pre class="brush:js">
+            alert ('Ваше сообщение');
+        </pre>
+        <p>Пример</p>
+        <pre class="brush:js">
+            alert ('Hello World');
+            var a = 3;
+            alert (a);
+        </pre>
+        <p>Метод <code>prompt</code> выводит сообщение с заголовком title и полем ввода со значение value</p>
+        <p>Синтаксис</p>
+        <pre class="brush:js">
+            var result = prompt ('title',value);
+        </pre>
+        <p>Пример</p>
+        <pre class="brush:js">
+            var result = prompt ('Сколько Вам лет?',55);
+            alert (result);
+        </pre>
+        <p><span class="label">Внимание</span> значение value может отсутсвовать </p>
+        <p>Пример</p>
+        <pre class="brush:js">
+            var result = prompt ('Сколько Вам лет?');
+            alert (result);
+        </pre>
+        <p><span class="label alert">Важно</span> При использование браузера Internet Explorer в поле ввода выведет undefined. Так что лучше использовать следующий код </p>
+        <pre class="brush:js">
+            var result = prompt ('Сколько Вам лет?','');
+            alert (result);
+        </pre>
+        <p><span class="label">Внимание</span> Если пользователь нечего не введет результатом будет пустая строка, если нажмет CANCEL - null</p>
+        <p><span class="label alert">Важно</span> prompt возвращает строку (string)</p>
+        <p>И последний метод <code>confirm</code> выводит окно с вопросом и двумя кнопками OK и CANCEL.
+        При нажатие OK будет true, а при нажатие CANCEL - false</p>
+        <p>Синтаксис</p>
+        <pre class="brush:js">
+            var result = confirm (вопрос);
+        </pre>
+        <p>Пример</p>
+        <pre class="brush:js">
+            var result = confirm ('Вам есть 18 лет?');
+            alert (result);
+        </pre>
+        <hr/>
+        <h5>Задания</h5>
+        <p>Напишите код который спрашивает имя и выводит его. </p>
+        <hr/>
+        <h6>Решение смотри <a href="solutions.html">тут</a></h6>
+    </div>
+</div>
+<footer class="text-center panel"><br/> &copy; 2014 Ver 0.1</footer>
+</body>
+</html>

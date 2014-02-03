@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/foundation.min.css"/>
+    <script type="text/javascript" src="../js_vendor/syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
+    <script type="text/javascript" src="../js_vendor/syntaxhighlighter_3.0.83/scripts/shBrushJScript.js"></script>
+    <link href="../js_vendor/syntaxhighlighter_3.0.83/styles/shCore.css" rel="stylesheet" type="text/css" />
+    <link href="../js_vendor/syntaxhighlighter_3.0.83/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+    <title>JavaScript Учебник</title>
+</head>
+<body>
+<script type="text/javascript">
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.defaults['gutter'] = false;
+    SyntaxHighlighter.all()
+</script>
+<div class="panel"><h2>Учебник JAVASCRIPT</h2></div>
+<div class="row">
+    <div class="large-2 columns">
+        <h4>Меню</h4>
+        <ul class="side-nav">
+            <li class="active"><a href="JS_1.0.html">Глава 1</a></li>
+            <li><a href="JS_1.1.html">Глава 1.1</a></li>
+            <li><a href="JS_interaction.html">Взаимодействие</a></li>
+
+        </ul>
+    </div>
+    <div class="large-10 columns">
+        <h4> Глава 1 - Типы и переменные</h4>
+        <br/>
+        <h5>Типы</h5>
+        <p>В JavaScript существут несколько типов:</p>
+        <ul>
+            <li>Строка (string)</li>
+            <li>Число (number)</li>
+            <li>Логический (boolean)</li>
+            <li>Ничто (null)</li>
+            <li>Неопределен (undefined)</li>
+            <li>Объект (object)</li>
+        </ul>
+        <h5>Переменные</h5>
+        <P>Давайте рассмотрим объявление переменной.</P>
+        <pre class="brush:js">
+            var s; //объявление переменной
+        </pre>
+        <p>Здесь мы просто объявили переменную  s. </p>
+
+        <P>Присвоение какого-то значения переменной</P>
+         <pre class="brush:js">
+             var s = 1; //Присвоение значения переменной
+        </pre>
+        <p>Этот код читается так объявить переменную s и присвоить ей значение 1</p>
+
+        <p>Можно написать и так</p>
+        <pre class="brush:js">
+             var s; //Объявили переменную
+             var s = 1; //Присвоение значения переменной
+        </pre>
+
+        <p>Изменение значений переменных</p>
+        <pre class="brush:js">
+            var w = "Hello"; //Присвоили значение
+            w = "World"; //Изменили значение переменной
+        </pre>
+
+        <p>Замещение переменной (или копирование переменной)</p>
+        <pre class="brush:js">
+            var a = 1; // Присвоили значение переменной a
+            var b = 3; // Присвоили значение переменной b
+            b = a; // Теперь b равно a (b = 1)
+        </pre>
+
+        <p>А теперь рассмотри типы переменных</p>
+        <pre class="brush:js">
+            var s = 'String' ; // Строка
+            var i = 1; // Число (number)
+            var if = 1.025; // Число (number)
+            var bool = true; // Логический (boolean)
+            var boolf = false; // Логический (boolean)
+            var nul = null; // Null
+            var und;
+            alert (und);// Undefined
+        </pre>
+        <p>Тут мы объявили переменные и присвоили им значени, про alert читай в <a href="JS_interaction.html">взаимодействие</a></p>
+        <p><span class="label alert">Важно</span> Использование директивы <code>var</code> обязательно. Вслучае пропуска может произойти ошибка. </p>
+        <hr/>
+        <h5>Задания</h5>
+        <ul>
+            <li>
+                <p>Объявить переменную X</p>
+            </li>
+            <li>
+                <p>Присвоить значение 100 переменной Y</p>
+            </li>
+            <li>
+                <p>Присвоить значение 'World' переменной W</p>
+            </li>
+            <li>
+                <p>Какой тип присвоен переменной A</p>
+                <pre class="brush:js">
+                    var a = 432;
+                </pre>
+            </li>
+            <li>
+                <p>Какой тип присвоен переменной B</p>
+                <pre class="brush:js">
+                    var b = 'true';
+                </pre>
+            </li>
+        </ul>
+        <hr/>
+        <h5>Решение</h5>
+        <p> Смотри <a href="solutions.html">тут</a></p>
+    </div>
+</div>
+<footer class="text-center panel"><br/> &copy; 2014 Ver 0.1</footer>
+</body>
+</html>
