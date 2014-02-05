@@ -143,22 +143,189 @@
             a++; // префиксная форма
             ++a; // постфиксная форма
         </pre>
-
-
+        <p>Между этими видами записи существует разница. Разница быдет заметна только когда нам нужно не только увеличить или уменьшить переменную, но и использовать результат в этом же выражении</p>
+        <pre class="brush:js">
+            var a = 3;
+            alert ('a = '+ a++); // 3
+            //теперь a = 4
+            alert ('Теперь a = ' + a)
+            var b = 3;
+            alert ('b =' + ++b) // 4
+        </pre>
+        <p>Оператор <code>++</code> <code>--</code> можно  пременять и в выражениях</p>
+        <pre class="brush:js">
+            var a = 3;
+            var result = 3 + ++a;
+            alert (result); // 7
+        </pre>
         <h5>Побитовые операторы</h5>
+        <ul>
+            <li>
+                <p>Побитовое И (AND)</p>
+            </li>
+            <li>
+                <p>Побитовое ИЛИ (OR)</p>
+            </li>
+            <li>
+                <p>Побитовое исключающее ИЛИ (XOR)</p>
+            </li>
+            <li>
+                <p>Побитовое НЕ (NOT)</p>
+            </li>
+            <li>
+                <p>Левый сдвиг</p>
+            </li>
+            <li>
+                <p>Правый сдвиг, переносящий знак</p>
+            </li>
+            <li>
+                <p>Правый сдвиг с заполнением нулями</p>
+            </li>
+        </ul>
+        <p>Записываются они так</p>
+        <pre class="brush:js">
+            	a & b // AND
+             	a | b // OR
+            	a ^ b // NOR
+            	~ a // NOT
+            	a << b // Левый сдвиг
+            	a >> b // Правый сдвиг, переносящий знак
+            	a >>> b // Правый сдвиг с заполнением нулями
+        </pre>
+        <p>Более подробно <a href="#">тут глава x</a> </p>
+
+        <h5>Логические значения</h5>
+        <p>Существует 2 вида логических значения это <code>true</code> и <code>false</code></p>
+        <p><code>true</code> - означает истина</p>
+        <p><code>false</code> - означает ложь</p>
+
 
         <h5>Операторы сравнения</h5>
-
+        <ul>
+            <li>
+                <p>Больше и меньше</p>
+            </li>
+            <li>
+                <p>Больше, меньше или равно</p>
+            </li>
+            <li>
+                <p>Равно</p>
+            </li>
+            <li>
+                <p>Не равно</p>
+            </li>
+        </ul>
+        <p>Пишутся они так</p>
+        <pre class="brush:js">
+            a > b; // Больше
+            a < b; // Меньше
+            a <= b; // Меньше или равно
+            a >= b; // Больше или равно
+            a == a; // Равно
+            a != b; // Не равно
+        </pre>
+        <p>Сравнение чисел</p>
+        <pre class="brush:js">
+            var a = true; //тип boolean (логическое значание true);
+            var b = 5>4;
+            var c = 5<4;
+            alert (b); //true
+            alert (c);//false
+            alert (a == c); //false т.к true не может быть равно false. alert(true == false)
+            alert (a == b); //true
+            alert (a != c);  //true
+        </pre>
+        <p>Сравнение строк</p>
+        <pre class="brush:js">
+            alert ('б' > 'а'); //true
+        </pre>
+        <p><span class="label">Внимание </span> Буквы сравниваются в алфавитном порядке. Какая буква в алфавите позже — та и больше.</p>
+        <p>При сравниение строк сначала сравнивается первая буква если она больше то дальше сравнение не проиходит, если одинаковы то сравнение идет дальше.Если же в одной сторке
+            отсутсвует буква, а в другой она есть то больше <code> > </code> та строка в которой буква есть</p>
+        <pre class="brush:js">
+            alert ('Зуб' > 'Ананас');// true
+            alert ('Вася' > 'Ваня'); //true
+            alert ('Дом' > 'Домик'); //false
+        </pre>
+        <p><span class="label alert">Важно </span> При сравнении значения преобразуются к числам. Исключение: когда оба значения — строки, тогда не преобразуются.</p>
+        <p><span class="label"> Важно </span> При сравнивание логических значений с числом они(логические значения) преобразуются к числам
+            <code>true</code> - 1, <code>false</code> -0 </p>
+        <p>Для приведения значения к числу ипользуйте унарный плюс. Есть и другие способы преобразования о них читайте
+            <a href="#">тут глава x</a></p>
+        <pre class="brush:js">
+            alert ('4' > 3); //true
+            alert ('0' > 700); //false
+            alert ('2' > '14');//true
+            alert ('21' <' 1000');//false
+            alert (true == 0); //false
+            alert (+'21' < +'1000');//true
+        </pre>
+        <p><span class="label alert">Важно </span> Для проверки равенства без преобразования типов используются операторы строгого равенства
+            <code>===</code>  и <code>!==</code> .</p>
+        <pre class="brush:js">
+             alert (true == 1); //true
+             alert (true === 1); //false
+        </pre>
+        
+        <h5>Логические операторы</h5>
+        <p>Логические операторы деляться:</p>
+        <ul>
+            <li>
+                <p>И - <code>&&</code> </p>
+            </li>
+            <li>
+                <p>ИЛИ - <code>||</code></p>
+            </li>
+            <li>
+                <p>НЕ - <code>!</code> </p>
+            </li>
+        </ul>
+        <p><span class="label alert">Важно</span> И <code>&&</code> возвращает true, если оба аргумента истинны, иначе — false</p>
+        <pre class="brush:js">
+            alert( true  && true ); // true
+            alert( false && true ); // false
+            alert( true  && false); // false
+            alert( false && false); // false
+        </pre>
+        <p><span class="label alert">Важно</span> ИЛИ <code>||</code> возвращает true если хотя бы один из аргументов true, иначе — false».</p>
+        <pre class="brush:js">
+            alert( true  || true ); // true
+            alert( false || true ); // true
+            alert( true  || false); // true
+            alert( false || false); // false
+        </pre>
+        <p><span class="label alert">Важно</span> НЕ <code>!</code> Выполняет логическое отрицание выражения</p>
+        <pre class="brush:js">
+            alert( !true); // false
+            alert( !false ); // true
+        </pre>
+        <p><span class="label alert">Важно</span> Двойное НЕ <code>!!</code> может использоваться для преобразования в тип boolean</p>
+        <pre class="brush:js">
+            var str = "hello";
+            alert (str); // hello
+            alert (!!str); // true
+        </pre>
         <h5>Приоритет операторов</h5>
         <p>Ознакомиться можно <a href="https://developer.mozilla.org/ru/JavaScript/Reference/operators/operator_precedence">тут</a>  </p>
-
-
-
-
 
         <hr/>
 
         <h5>Задания</h5>
+        <p>Чему равен x и y ?</p>
+        <pre class="brush:js">
+            var x = 1;
+            x++;
+            var y = 2;
+            --y;
+            alert('x= '+ x);
+            alert('y= '+ y);
+        </pre>
+        <p>Чему равно a и b ?</p>
+        <pre class="brush:js">
+            var a = 3,b = 4;
+            alert (a++);
+            alert (++b);
+        </pre>
         <hr/>
         <h6>Решение смотри <a href="solutions.html">тут</a></h6>
     </div>
